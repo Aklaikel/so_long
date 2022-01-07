@@ -6,12 +6,11 @@
 /*   By: aklaikel <aklaikel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 06:44:38 by aklaikel          #+#    #+#             */
-/*   Updated: 2022/01/05 18:19:39 by aklaikel         ###   ########.fr       */
+/*   Updated: 2022/01/07 09:41:47 by aklaikel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"so_long.h"
-#include "get_next_line/get_next_line.h"
 
 static void	check_ber(char *file_name)
 {
@@ -24,21 +23,29 @@ static void	check_ber(char *file_name)
 		exit(0);
 	}
 }
-int main(int ac , char**av)
+
+int	main(int ac, char **av)
 {
-    if(ac != 2)
-    {
-        printf("args error");
-        return (0);
-    }
-   t_data  *data;
-   data = malloc(sizeof(t_data));
-    check_ber(av[1]);
-    data->map = parse_map(av[1], &(data->height));
-    check_map(data);
-    player_position(data);
-    data->mlx = mlx_init();
-    data->window = mlx_new_window(data->mlx,\
-        data->width * 36, data->height * 36,"so_long");
-    rendring(data);
+	t_data	*data;
+
+	if (ac != 2)
+	{
+		printf("args error");
+		return (0);
+	}
+	data = malloc(sizeof(t_data));
+	check_ber(av[1]);
+	data->number_of_moves = 0;
+	data->height = 0;
+	data->map = parse_map(av[1], &(data->height));
+	check_map(data);
+	player_position(data);
+	data->mlx = mlx_init();
+	data->window = mlx_new_window(data->mlx, \
+		data->width * 36, data->height * 36, "so_long");
+	load_imgs(data);
+	rendring(data);
+	mlx_hook(data->window, 2, 1L, move_player, data);
+	mlx_hook(data->window, 17, 1L, distroy, 0);
+	mlx_loop(data->mlx);
 }

@@ -6,11 +6,11 @@
 /*   By: aklaikel <aklaikel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 16:50:44 by aklaikel          #+#    #+#             */
-/*   Updated: 2021/12/28 16:18:50 by aklaikel         ###   ########.fr       */
+/*   Updated: 2022/01/06 16:42:26 by aklaikel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"get_next_line.h"
+#include"../so_long.h"
 
 int	ft_strlen(char *str)
 {

@@ -6,11 +6,11 @@
 /*   By: aklaikel <aklaikel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 16:16:36 by aklaikel          #+#    #+#             */
-/*   Updated: 2021/12/07 18:50:12 by aklaikel         ###   ########.fr       */
+/*   Updated: 2022/01/06 16:42:30 by aklaikel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include"../so_long.h"
 
 char	*find_i(char *str)
 {
