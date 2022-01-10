@@ -6,7 +6,7 @@
 /*   By: aklaikel <aklaikel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 08:27:54 by aklaikel          #+#    #+#             */
-/*   Updated: 2022/01/07 11:17:17 by aklaikel         ###   ########.fr       */
+/*   Updated: 2022/01/09 22:10:05 by aklaikel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	invalid_map(t_data	*data)
 {
-	printf("Invalid Map\n");
-	exit(0);
+	printf("Eroor\nInvalid Map\n");
 	free_all(data);
+	exit(0);
 }

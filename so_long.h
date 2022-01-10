@@ -6,7 +6,7 @@
 /*   By: aklaikel <aklaikel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/25 07:32:25 by aklaikel          #+#    #+#             */
-/*   Updated: 2022/01/07 11:17:54 by aklaikel         ###   ########.fr       */
+/*   Updated: 2022/01/08 19:26:56 by aklaikel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ void	put_img(t_data *data, int i, int j);
 void	img(t_data *data, t_img *img, int i, int j);
 int		move_player(int key, t_data *data);
 void	load_imgs(t_data	*data);
-int		distroy(int n, t_data	*data);
+int		distroy(int n);
 // derection
 void	move_derection(t_data *data, t_position p);
 void	move_up(t_data *data);

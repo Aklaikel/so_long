@@ -6,7 +6,7 @@
 /*   By: aklaikel <aklaikel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 06:44:38 by aklaikel          #+#    #+#             */
-/*   Updated: 2022/01/07 09:41:47 by aklaikel         ###   ########.fr       */
+/*   Updated: 2022/01/09 22:16:48 by aklaikel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static void	check_ber(char *file_name)
 	len = ft_strlen(file_name);
 	if (!ft_strncmp(file_name + len - 4, ".ber", 4))
 	{
-		printf("File name must end with {.ber}\n");
+		printf("Error\nFile name must end with {.ber}\n");
 		exit(0);
 	}
 }
@@ -46,6 +46,6 @@ int	main(int ac, char **av)
 	load_imgs(data);
 	rendring(data);
 	mlx_hook(data->window, 2, 1L, move_player, data);
-	mlx_hook(data->window, 17, 1L, distroy, 0);
+	mlx_hook(data->window, 17, 1L, distroy, data);
 	mlx_loop(data->mlx);
 }

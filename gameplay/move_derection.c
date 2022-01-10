@@ -6,7 +6,7 @@
 /*   By: aklaikel <aklaikel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/02 10:08:03 by aklaikel          #+#    #+#             */
-/*   Updated: 2022/01/07 11:19:43 by aklaikel         ###   ########.fr       */
+/*   Updated: 2022/01/08 16:15:14 by aklaikel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,6 @@ void	move_derection(t_data	*data, t_position p)
 	else
 	{
 		printf("You win\n");
-		free_all(data);
 		exit(0);
 	}
 }

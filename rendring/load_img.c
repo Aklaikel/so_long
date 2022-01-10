@@ -6,7 +6,7 @@
 /*   By: aklaikel <aklaikel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 05:26:17 by aklaikel          #+#    #+#             */
-/*   Updated: 2022/01/07 05:16:20 by aklaikel         ###   ########.fr       */
+/*   Updated: 2022/01/09 22:12:23 by aklaikel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static t_img	*load_img(t_data	*data, char	*filename)
 	img = (t_img *)malloc(sizeof(t_img));
 	if (!img)
 	{
-		perror("an error accrued\n");
+		perror("Error\nInvalid Image");
 		exit(1);
 	}
 	img->data = mlx_xpm_file_to_image(data->mlx, filename, \
